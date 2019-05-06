@@ -56,6 +56,7 @@ guacamole_redhat_pre_reqs:
   - pango-devel
   - pulseaudio-libs-devel
   - uuid-devel
+  - make
 
 guacamole_server_package: "{{ 'guacamole-server-' + guacamole_version + '.tar.gz' }}"
 
@@ -82,4 +83,5 @@ guacamole_users: []
 #       password: password
 # Define version to install
 # 0.9.13-incubating | 0.9.14
-guacamole_version: 0.9.14
+# 1.0.0 is current, and only version that is downloadable via given path
+guacamole_version: 1.0.0
