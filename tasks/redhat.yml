@@ -4,8 +4,6 @@
     name: ["epel-release"]
     state: present
   become: true
-  register: result
-  until: result is successful
   when: ansible_distribution != "Fedora"
 
 - name: redhat | Enabling RPM Fusion Repos
@@ -13,8 +11,6 @@
     name: "{{ guacamole_redhat_fusion_repos }}"
     state: present
   become: true
-  register: result
-  until: result is successful
   when: ansible_distribution != "Fedora"
 
 - name: redhat | Installing Guacamole Pre-Reqs
@@ -22,8 +18,6 @@
     name: "{{ guacamole_redhat_pre_reqs }}"
     state: present
   become: true
-  register: result
-  until: result is successful
   when: ansible_distribution != "Fedora"
 
 - name: redhat | Installing Guacamole Pre-Reqs
@@ -31,6 +25,4 @@
     name: "{{ guacamole_redhat_pre_reqs }}"
     state: present
   become: true
-  register: result
-  until: result is successful
   when: ansible_distribution == "Fedora"
