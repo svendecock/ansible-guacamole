@@ -5,3 +5,10 @@
     enabled: true
     state: started
   become: true
+
+- name: services | Ensuring Tomcat Service Is Enabled And Starts On Boot
+  service:
+    name: tomcat
+    enabled: true
+    state: started
+  become: true
